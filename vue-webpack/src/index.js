@@ -1,8 +1,11 @@
 import Vue from 'vue';
+import Menu from './components/menu/menu';
 
 var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
+  components: {
+    Menu
+  },
+  template: '<Menu></Menu>'
 })
+
+app.$mount('#app');
