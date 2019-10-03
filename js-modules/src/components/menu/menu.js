@@ -9,7 +9,9 @@ class Menu {
 
     getTemplate(data) {
         return (
-            `<h1>Hola</h1>`
+            '<ul>' +
+                data.map(el => `<li>${el}</li>`).join('') +
+            '</ul>'
         );
     }
 
