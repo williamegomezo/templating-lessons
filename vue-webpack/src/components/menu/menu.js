@@ -1,10 +1,9 @@
 import Vue from 'vue';
+import menuHtml from './menu.html';
 import menuData from './menu.json';
 
 const Menu = Vue.component('todo-item', {
-    template: `<ul>
-                <li v-for="el in menuData.items">{{el}}</li>
-              </ul>`,
+    template: menuHtml,
     data: function () {
         return {
           menuData

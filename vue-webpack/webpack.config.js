@@ -7,6 +7,15 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: {loader: 'html-loader'}
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
         template: './index.html'
