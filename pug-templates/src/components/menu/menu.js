@@ -1,18 +1,11 @@
 import data from './menu.json';
+import template from './menu.pug';
 
 class Menu {
     constructor(){
         this.node = document.createElement("div");
-        this.template = this.getTemplate(data);
+        this.template = template(data);
         this.render();
-    }
-
-    getTemplate(data) {
-        return (
-            '<ul>' +
-                data.map(el => `<li>${el}</li>`).join('') +
-            '</ul>'
-        );
     }
 
     render() {
