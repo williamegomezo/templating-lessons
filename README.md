@@ -1,1 +1,1 @@
-# templating-class
+# Templating Lessons
